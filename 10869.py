@@ -1,0 +1,7 @@
+n_s = input()
+n_l = n_s.split(" ")
+print(int(n_l[0]) + int(n_l[1]))
+print(int(n_l[0]) - int(n_l[1]))
+print(int(n_l[0]) * int(n_l[1]))
+print(int(n_l[0]) / int(n_l[1]))
+print(int(n_l[0]) % int(n_l[1]))

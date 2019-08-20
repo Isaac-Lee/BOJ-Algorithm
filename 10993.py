@@ -1,5 +1,4 @@
-from builtins import range
-
+### Unsolved
 n = int(input())
 
 width = 1

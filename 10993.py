@@ -1,4 +1,4 @@
-### Unsolved
+
 n = int(input())
 
 width = 1

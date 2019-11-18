@@ -24,4 +24,7 @@ for k in range(nm[1]):
 # print(mNum)
 # print(re)
 
-## 미해결
+'''미해결'''
+'''
+nList[index].remove(mini)에서 에러
+'''

@@ -4,12 +4,17 @@ re = 1
 b = 0
 t = 0
 
-for i in range(2, n):
+for i in range(1, n+1):
     s += i
     if n <= s:
         re = i
         break
-if re %2 == 0:
+        
+print(n, re, s)
+if re == 1:
+    b=1
+    t=1        
+elif re %2 == 0:
     b = 1+(s-n)
     t = re - (s-n)
 else:

@@ -21,5 +21,3 @@ else:
     b = re - (s-n)
     t = 1+(s-n)
 print(str(t)+"/"+str(b))
-
-# 문제 틀림

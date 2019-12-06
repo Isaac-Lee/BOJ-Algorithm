@@ -1,0 +1,6 @@
+n = [k for k in input().split()]
+u = n[0]
+d = n[1]
+t = n[2]
+l = 0
+while(l<t):

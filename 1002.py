@@ -1,36 +1,20 @@
-def length(x1, x2, y1, y2):
-    return ((x1 - x2) ** 2 + (y1 - y2) ** 2)
+Case = int(input())
+for _ in range(Case):
+    x_1, y_1, r_1, x_2, y_2, r_2 = list(map(int, input().split()))
+    d = ((x_1 - x_2) ** 2) + ((y_1 - y_2) ** 2)
+    r_sum = (r_1 + r_2) ** 2
+    r_diff = (r_1 - r_2) ** 2
 
-n = int(input())
-ans=[]
-for i in range(n):
-    case = [int(k) for k in input().split()]
-    x1 = case[0]
-    y1 = case[1]
-    r1 = case[2]
-    x2 = case[3]
-    y2 = case[4]
-    r2 = case[5]
-    if r1 > r2:
-        c = r1
-        r1 = r2
-        r2 = c
-    if (x1 == x2) and (y1 == y2) and (r1 == r2):
-        ans.append(-1)
-        pass
-    if (length(x1, x2, y1, y2))**2 > ((r2-r1)**2)**2:
-        if (length(x1, x2, y1, y2))**2 > ((r1 + r2)**2)**2:
-            ans.append(0)
-        elif (length(x1, x2, y1, y2))**2 == ((r1 + r2)**2)**2:
-            ans.append(1)
+    if (d == 0):
+
+        if (r_1 == r_2):
+            print(-1)
         else:
-            ans.append(2)
-    elif (length(x1, x2, y1, y2))**2 == ((r2-r1)**2)**2:
-        ans.append(1)
+            print(0)
     else:
-        ans.append(0)
-
-for n in ans:
-    print(n)
-
-# TODO 문제 틀렸음 다시 풀기
+        if ((d == r_sum) or (d == r_diff)):
+            print(1)
+        elif ((d < r_sum) and (d > r_diff)):
+            print(2)
+        else:
+            print(0)

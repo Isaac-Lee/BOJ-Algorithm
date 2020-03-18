@@ -2,10 +2,12 @@ import sys
 
 
 def make123(n):
+
+    if memo[n] > 0:
+        return memo[n]
+
     if n == 1 or n == 0:
         memo[n] = 1
-        return 1
-    if memo[n] > 0:
         return memo[n]
 
     memo[n] += make123(n-1)

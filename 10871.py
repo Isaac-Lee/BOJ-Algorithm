@@ -1,11 +1,9 @@
 import sys
-nlist=[int(k) for k in sys.stdin.readline().split()]
-numlist = [int(k) for k in sys.stdin.readline().split()]
-
+n=list(map(int, input().split()))[0]
+numlist = list(map(int, input().split()))
 nstring = ''
-
 for i in numlist:
-    if i < nlist[1]:
+    if i < n:
         nstring += '%d' % i
         nstring += ' '
 print(nstring)

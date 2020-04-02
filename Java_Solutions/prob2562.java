@@ -1,24 +1,26 @@
 import java.io.*;
 
-class prob2562 {
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
+public class prob2562 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         int[] num = new int[9];
-        for (int i = 0; i < 9; i++){
-            num[i] = Integer.parseInt(br.readLine());
+        int count = 0;
+        int max = 0;
+        for(int i=0; i<num.length; i++) {
+            num[i] = Integer.valueOf(in.readLine());
+            if(num[i] > 99)
+                System.exit(0);
         }
-        int max = Integer.MIN_VALUE;
-        int index = 0;
-        for (int i = 0; i < 9; i++) {
-            if (num[i] > max){
+
+        for(int i=0; i<num.length; i++) {
+            if(num[i] > max) {
                 max = num[i];
-                index = i;
+                count = i+1;
             }
         }
+
         System.out.println(max);
-        System.out.println(index+1);
-        bw.close();
+        System.out.println(count);
+
     }
 }

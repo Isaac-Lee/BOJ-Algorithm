@@ -1,7 +1,9 @@
+package BOJ_Solutios_Java;
+
 import java.io.*;
 import java.util.*;
 
-public class prob_10818 {
+public class prob10818 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));

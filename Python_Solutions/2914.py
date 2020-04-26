@@ -1,5 +1,2 @@
-while True:
-    try:
-        print(input())
-    except EOFError:
-        break
+a, b = map(int, input().split())
+print(a*(b-1)+1)

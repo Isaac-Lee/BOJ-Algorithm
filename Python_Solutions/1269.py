@@ -1,0 +1,6 @@
+input()
+A = set(input().split())
+B = set(input().split())
+answer1 = len(set.difference(A, B))
+answer2 = len(set.difference(B, A))
+print(answer1 + answer2)

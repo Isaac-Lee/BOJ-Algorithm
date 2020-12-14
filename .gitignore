@@ -1,0 +1,9 @@
+.gitignore
+.vscode
+.idea
+goorm.manifest
+venv
+./Python_Solutions/.idea
+./Java_Solutions/.idea
+./CPP_Solution/*.out
+./C_Solution/.idea

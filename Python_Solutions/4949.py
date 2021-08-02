@@ -1,8 +1,10 @@
+from collections import deque
+
 while True:
     bracket = input()
     if bracket == ".":
         break
-    bracket_stack = []
+    bracket_stack = deque()
     answer = True
 
     for j in bracket:

@@ -1,11 +1,11 @@
 import math
 
-room_num = list(map(int, str(input())))
-set_num = [0] * 9
+room_num = map(int, input())
+set_num = [0] * 10
 
 for i in room_num:
     if i == 6 or i == 9:
-        set_num[5] += 0.5
+        set_num[6] += 0.5
     else:
         set_num[i] += 1
 

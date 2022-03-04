@@ -1,3 +1,7 @@
-import sys
-a, b = map(float, sys.stdin.readline().split())
-print(float(a/b))
+a, b = map(int, input().split())
+result = str(a//b)+"."
+a = a%b*10
+for _ in range(1000):
+    result+=str(a//b)
+    a = a % b * 10
+print(result)

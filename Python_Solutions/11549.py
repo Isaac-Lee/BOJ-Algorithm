@@ -1,0 +1,1 @@
+answer=input();print(input().count(answer))

@@ -1,6 +1,7 @@
 .DS_Store
 CPP_Solutions/.vscode/c_cpp_properties.json
 CPP_Solutions/.vscode/settings.json
+CPP_Solutions/a.out
 test/deque.py
 test/queue.java
 test/stack.java

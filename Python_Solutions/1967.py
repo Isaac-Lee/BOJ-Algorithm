@@ -1,7 +1,9 @@
 from collections import deque, defaultdict
+import sys
+input = sys.stdin.readline
 
 def dfs(s, t):
-    visited = [s]
+    visited = {s}
     stack = []
     result = [0, 0]
     for c in t[s]:
@@ -14,7 +16,7 @@ def dfs(s, t):
         c, v = node
         if c in visited:
             continue
-        visited.append(c)
+        visited.add(c)
         if result[1] < v:
             result = node
         for child in t[c]:

@@ -6,16 +6,16 @@ def BFS(G, N, R):
     visited = set()
     visit_count = 0
     visit = [-1] * (N+1)
-    queue = deque([R])
+    queue = deque([[R, 0]])
     while queue:
-        n = queue.popleft()
+        n, d = queue.popleft()
         if n in visited:
             continue
         visited.add(n)
         visit_count += 1
-        visit[n] = visit_count
-        for v in sorted(G[n], reverse=True):
-            queue.append(v)
+        visit[n] = d * visit_count
+        for v in sorted(G[n]):
+            queue.append([v, d+1])
     return visit[1:]
 
 
@@ -28,5 +28,9 @@ if __name__ == '__main__':
         u,v = map(int, input().split())
         graph[u].append(v)
         graph[v].append(u)
+    result = 0
     for k in BFS(graph, n, r):
-        print(k)
+        if k == -1:
+            continue
+        result += k
+    print(result)

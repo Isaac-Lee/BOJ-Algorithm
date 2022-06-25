@@ -1,0 +1,1 @@
+print('go' if input().count('a') >= input().count('a') else 'no')

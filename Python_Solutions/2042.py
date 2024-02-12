@@ -9,15 +9,15 @@ def init(node, start, end):
     return tree[node]
 
 def get_sum(node,start,end,i,j):
-    if i<start or j>end:
+    if i<start or i>end:
         return 0
-    if j<=start and end<=i:
+    if i<=start and end<=j:
         return tree[node]
     mid = (start + end) // 2
     return get_sum(node*2,start,mid,i,j) + get_sum(node*2+1,mid+1,end,i,j)
            
 def update(node,start,end,i,diff):
-    if i < start or i > end:
+    if i<start or i>end:
         return
     tree[node] += diff
     if start != end:

@@ -1,0 +1,1 @@
+print(input()+"\n1")
